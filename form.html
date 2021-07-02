@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title> Registration form</title>
+	<style type="text/css">
+		div.one{width: 200px;height: 700px;float: left;padding-left: 500px;}
+		div.two{width: 200px;height: 700px;float: left;}
+		.three{width: 140px;height: 24px;}
+		.four{padding-left: 790px;}
+	</style>
+</head>
+<body  >
+<form method="post" action="formaction.php" >	
+<h4 align="middle"> REGISTRATION FORM </h4>
+<div class="four"> <a href="form2.php"> Log in </a> </div>	
+<br>
+<div class="one">
+	Name   <br><br><br>
+	Address <br><br><br>
+	DOB     <br><br><br>
+	Gender  <br><br><br>
+	Contact Number <br><br><br>
+	Username <br><br><br>
+	Password <br><br><br>
+	
+</div>
+<div class="two">
+	<input type="text" name="name" pattern="^[a-zA-Z-' ]*$" title="use alphabets" required="required" class="three">
+	<br><br>
+	<textarea name="address" required="required" class="three"></textarea> 
+	<br><br>
+	<input type="date" name="dob" required="required" class="three">
+	<br><br>
+	<input type="hidden" name="gender"  >
+	<input type="radio" name="gender" value="male" required="required" >Male
+	<br><br>
+	<input type="radio" name="gender" value="female" required="required">Female
+	<br><br>
+	<input type="phonenumber" name="number" pattern="^\d{10}$" required="required" class="three">
+	<br><br>
+	<input type="text" name="username" pattern="^\w{5,}$" title="enter valid user name contain equal or more than 5 character" required="required" class="three">
+	<br><br>
+	<input type="password" name="pwd" pattern=".*^(?=.{8,20})(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9]).*$" title="Must contain at least one number and one uppercase and lowercase letter, and at least 8 or more character" required="required" class="three">
+	<br><br>
+	<input type="submit" name="sub" value="submit">
+	<a href="view.php">
+	<input type="button" name="view" name="view" value="view" >
+    </a>
+</div>	
+</form>
+</body>
+</html>
